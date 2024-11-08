@@ -1,0 +1,140 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contêiner principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    overflow: hidden;
+}
+
+/* Animação de fade-in para o formulário */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos do formulário */
+.form {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Efeito de movimento sutil ao passar o mouse no formulário */
+.form:hover {
+    transform: translateY(-5px);
+}
+
+/* Título */
+.form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* Campos de entrada */
+.input-field {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-field input::placeholder {
+    color: #aaa;
+}
+
+/* Efeito ao focar nos campos de entrada */
+.input-field input:focus {
+    border-color: #ff7e5f;
+    box-shadow: 0 0 8px rgba(255, 126, 95, 0.3);
+}
+
+/* Ícones nos campos de entrada */
+.input-field i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #ff7e5f;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Estilo do botão de cadastro */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    transition: background 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animação de brilho no botão ao passar o mouse */
+.submit-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    color: #fd4747;
+    font-size: 14px;
+    display: none;
+}
+
